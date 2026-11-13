@@ -1,0 +1,15 @@
+{
+  "name": "assured-philly-pm-prebuild-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Static demo site: Squarespace 7.1 tabs and portal buttons, live email-record check for assuredphillypm.com.",
+  "scripts": {
+    "serve": "node tools/serve.mjs .",
+    "qa": "node tools/qa.mjs ."
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.0",
+    "playwright-core": "^1.56.0"
+  }
+}

@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Squarespace 7.1-shaped test page</title>
+<!--
+  Test page shaped like a Squarespace 7.1 Fluid Engine page. It uses the attributes Squarespace
+  documents as stable (section id = anchor slug, data-sqsp-section, data-sqsp-block,
+  data-sqsp-button, data-sqsp-text-block-content) and the header classes that production
+  Squarespace plugins target (.header-actions-action--cta, .header-menu-cta).
+  Placeholder brand and sample copy only.
+-->
+<style>
+  :root {
+    --black-hsl: 200, 30%, 12%;
+    --white-hsl: 0, 0%, 100%;
+    --accent-hsl: 178, 55%, 23%;
+    --lightAccent-hsl: 172, 24%, 94%;
+    --darkAccent-hsl: 192, 42%, 15%;
+    --heading-font: Georgia, "Times New Roman", serif;
+    --body-font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--body-font); color: hsl(var(--black-hsl)); background: hsl(var(--white-hsl)); line-height: 1.55; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--heading-font); font-weight: 600; line-height: 1.12; margin: 0 0 .5em; letter-spacing: -.01em; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+  h2 { font-size: clamp(1.6rem, 3.4vw, 2.3rem); }
+  h3 { font-size: 1.15rem; }
+  p { margin: 0 0 1em; }
+
+  /* ----- header (7.1 structure) ----- */
+  .header { position: sticky; top: 0; z-index: 20; background: hsl(var(--white-hsl)); border-bottom: 1px solid hsla(var(--black-hsl), .1); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 14px 4vw; }
+  .header-display-desktop { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; width: 100%; }
+  .header-title-nav-wrapper { display: flex; align-items: center; gap: 2.2rem; }
+  .header-title-logo a { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; font-family: var(--heading-font); font-size: 1.15rem; font-weight: 700; }
+  .logo-mark { width: 34px; height: 34px; border-radius: 7px; background: hsl(var(--accent-hsl)); display: grid; place-items: center; color: #fff; font-size: .78rem; letter-spacing: .04em; }
+  .header-nav-list { display: flex; gap: 1.4rem; }
+  .header-nav-item a { text-decoration: none; font-size: .96rem; }
+  .header-nav-item--active a { text-decoration: underline; text-underline-offset: 6px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .65em 1.3em; border-radius: 6px; background: hsl(var(--accent-hsl)); color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem; border: 2px solid hsl(var(--accent-hsl)); white-space: nowrap; }
+  .header-display-mobile { display: none; }
+  .header-burger-btn { width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer; }
+  .header-burger-btn span { display: block; height: 2px; margin: 6px 8px; background: hsl(var(--black-hsl)); }
+  .header-menu { display: none; position: fixed; inset: 0; top: 64px; background: hsl(var(--white-hsl)); padding: 2rem 6vw; z-index: 19; flex-direction: column; gap: 2rem; }
+  .header--menu-open .header-menu { display: flex; }
+  .header-menu-nav-list { display: flex; flex-direction: column; gap: 1.1rem; font-family: var(--heading-font); font-size: 1.7rem; }
+  .header-menu-nav-item a { text-decoration: none; }
+  @media (max-width: 799px) {
+    .header-display-desktop { display: none; }
+    .header-display-mobile { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  }
+
+  /* ----- sections (Squarespace sets display:flex on sections) ----- */
+  .sections { display: block; }
+  .page-section { display: flex; position: relative; padding: 4.5rem 0; }
+  .page-section .content-wrapper { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 4vw; }
+  .fluid-engine { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.4rem 2rem; align-items: start; }
+  .fe-block { grid-column: span 12; }
+  @media (min-width: 800px) {
+    .fe-span-7 { grid-column: span 7; } .fe-span-5 { grid-column: span 5; } .fe-span-6 { grid-column: span 6; } .fe-span-4 { grid-column: span 4; }
+  }
+  .page-section[data-section-theme="light"] { background: hsl(var(--lightAccent-hsl)); }
+  .page-section[data-section-theme="dark"] { background: hsl(var(--darkAccent-hsl)); color: hsl(var(--white-hsl)); }
+  .page-section[data-section-theme="dark"] .btn { background: hsl(var(--white-hsl)); color: hsl(var(--darkAccent-hsl)); border-color: hsl(var(--white-hsl)); }
+  #services-intro { padding: 3.5rem 0 1rem; }
+  #service-tabs { padding: 0; }
+  .eyebrow { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; color: hsl(var(--accent-hsl)); margin-bottom: .6rem; }
+  .lede { font-size: 1.12rem; max-width: 46ch; color: hsla(var(--black-hsl), .82); }
+  .steps { counter-reset: s; list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 2.1rem 1fr; gap: .8rem; align-items: start; }
+  .steps li::before { content: counter(s); width: 2.1rem; height: 2.1rem; border-radius: 50%; display: grid; place-items: center; background: hsl(var(--accent-hsl)); color: #fff; font-weight: 700; font-size: .9rem; }
+  .card { background: #fff; border: 1px solid hsla(var(--black-hsl), .1); border-radius: 10px; padding: 1.25rem 1.3rem; }
+  .art { width: 100%; height: auto; display: block; border-radius: 10px; }
+  .fine { font-size: .86rem; color: hsla(var(--black-hsl), .72); }
+  .footer-sections { padding: 2rem 4vw; font-size: .9rem; border-top: 1px solid hsla(var(--black-hsl), .12); }
+
+  /* emulated Squarespace entrance animation */
+  .preFade { opacity: 0; transition: opacity .5s ease; }
+  .fadeIn { opacity: 1; transition: opacity .5s ease; }
+</style>
+</head>
+<body class="tweak-global-animations-enabled">
+<header id="header" class="header theme-col--primary">
+  <div class="header-announcement-bar-wrapper">
+    <div class="header-inner">
+      <div class="header-display-desktop">
+        <div class="header-title-nav-wrapper">
+          <div class="header-title"><div class="header-title-logo"><a href="#"><span class="logo-mark">PM</span>Your PM Co.</a></div></div>
+          <div class="header-nav"><div class="header-nav-wrapper"><nav class="header-nav-list" aria-label="Main">
+            <div class="header-nav-item"><a href="#">Home</a></div>
+            <div class="header-nav-item header-nav-item--active"><a href="#" aria-current="page">Services</a></div>
+            <div class="header-nav-item"><a href="#">Current Rentals</a></div>
+            <div class="header-nav-item"><a href="#">Contact</a></div>
+          </nav></div></div>
+        </div>
+        <div class="header-actions header-actions--right">
+          <div class="showOnDesktop">
+            <div class="header-actions-action header-actions-action--cta" data-animation-role="header-element">
+              <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="/tenant-portal">Tenant Portal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-display-mobile">
+        <div class="header-title-logo"><a href="#"><span class="logo-mark">PM</span>Your PM Co.</a></div>
+        <button class="header-burger-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+  <div class="header-menu">
+    <div class="header-menu-nav"><nav class="header-menu-nav-list" aria-label="Mobile">
+      <div class="header-menu-nav-item"><a href="#">Home</a></div>
+      <div class="header-menu-nav-item"><a href="#">Services</a></div>
+      <div class="header-menu-nav-item"><a href="#">Current Rentals</a></div>
+      <div class="header-menu-nav-item"><a href="#">Contact</a></div>
+    </nav></div>
+    <div class="header-menu-cta"><a class="theme-btn--primary btn sqs-button-element--primary" href="/tenant-portal">Tenant Portal</a></div>
+  </div>
+</header>
+
+<main id="page" class="container" role="main">
+  <article class="sections" id="sections">
+
+    <section id="services-intro" class="page-section" data-section-id="64f0a1" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="white">
+      <div class="section-border"><div class="section-background"></div></div>
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine">
+        <div class="fe-block fe-span-7"><div class="sqs-block html-block sqs-block-html" data-sqsp-block="text"><div class="sqs-block-content"><div class="sqs-html-content" data-sqsp-text-block-content>
+          <p class="eyebrow">Services</p>
+          <h1>Buying, selling or leasing a Philadelphia home</h1>
+          <p class="lede">Sample copy. Pick the path that fits; each tab is a normal Squarespace section you edit in Fluid Engine.</p>
+        </div></div></div></div>
+      </div></div></div></div>
+    </section>
+
+    <section id="service-tabs" class="page-section" data-section-id="64f0a2" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="white">
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine"></div></div></div></div>
+    </section>
+
+    <section id="buy" class="page-section" data-section-id="64f0a3" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="light">
+      <div class="section-border"><div class="section-background"></div></div>
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine">
+        <div class="fe-block fe-span-6"><div class="sqs-block" data-sqsp-block="text"><div class="sqs-block-content"><div class="sqs-html-content" data-sqsp-text-block-content>
+          <h2>Buy</h2>
+          <p>Sample copy for buyers: neighbourhood guidance, rental-income estimates for investors, and a hand-off to property management after closing.</p>
+          <ul class="steps"><li><div><h3>Tell us the brief</h3><p class="fine">Budget, neighbourhoods, owner-occupied or investment.</p></div></li><li><div><h3>Tour and compare</h3><p class="fine">Rent comps and repair notes for each property.</p></div></li><li><div><h3>Close and hand over</h3><p class="fine">Optional management from day one.</p></div></li></ul>
+        </div></div></div></div>
+        <div class="fe-block fe-span-6"><div class="sqs-block image-block" data-sqsp-block="image"><div data-sqsp-image-block-image-container>
+          <svg class="art" data-sqsp-image-block-image role="img" aria-label="Illustration of a row of brick rowhouses" viewBox="0 0 600 380"><rect width="600" height="380" fill="#dfe9e7"/><g fill="#9c3b2b"><rect x="30" y="120" width="130" height="240"/><rect x="235" y="140" width="130" height="220"/><rect x="440" y="110" width="130" height="250"/></g><g fill="#b4553f"><rect x="160" y="100" width="75" height="260"/><rect x="365" y="125" width="75" height="235"/></g><g fill="#f4ede2"><rect x="52" y="150" width="34" height="46"/><rect x="104" y="150" width="34" height="46"/><rect x="52" y="220" width="34" height="46"/><rect x="104" y="220" width="34" height="46"/><rect x="257" y="170" width="34" height="46"/><rect x="309" y="170" width="34" height="46"/><rect x="462" y="140" width="34" height="46"/><rect x="514" y="140" width="34" height="46"/><rect x="462" y="210" width="34" height="46"/><rect x="514" y="210" width="34" height="46"/></g><g fill="#3b2a24"><rect x="80" y="300" width="30" height="60"/><rect x="285" y="300" width="30" height="60"/><rect x="490" y="300" width="30" height="60"/></g><rect y="356" width="600" height="24" fill="#7c7268"/></svg>
+        </div></div></div>
+        <div class="fe-block fe-span-6"><div class="sqs-block button-block" data-sqsp-block="button"><a class="btn sqs-button-element--primary" data-sqsp-button href="#">Talk to a buyer's agent</a></div></div>
+      </div></div></div></div>
+    </section>
+
+    <section id="sell" class="page-section" data-section-id="64f0a4" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="light">
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine">
+        <div class="fe-block fe-span-7"><div class="sqs-block" data-sqsp-block="text"><div class="sqs-block-content"><div class="sqs-html-content" data-sqsp-text-block-content>
+          <h2 class="preFade" data-animation-role="header">Sell</h2>
+          <p class="preFade" data-animation-role="content">Sample copy for sellers, including owners with tenants in place: pricing with the lease, showing schedules that respect tenants, and what transfers at closing.</p>
+        </div></div></div></div>
+        <div class="fe-block fe-span-5"><div class="card preFade" data-animation-role="content"><h3>Tenant in place?</h3><p class="fine">Sample copy: the lease, security deposit and notice periods travel with the sale.</p><a class="btn sqs-button-element--primary" data-sqsp-button href="#">Request a valuation</a></div></div>
+      </div></div></div></div>
+    </section>
+
+    <section id="lease" class="page-section" data-section-id="64f0a5" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="light">
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine">
+        <div class="fe-block fe-span-6"><div class="sqs-block" data-sqsp-block="text"><div class="sqs-block-content"><div class="sqs-html-content" data-sqsp-text-block-content>
+          <h2>Lease</h2>
+          <p>Sample copy for owners who want a unit leased and managed: listing, showings, screening against published criteria, lease signing and move-in.</p>
+          <p class="fine">Renters: see Current Rentals for available homes and the screening criteria.</p>
+        </div></div></div></div>
+        <div class="fe-block fe-span-6"><div class="card"><h3>What management covers</h3><ul class="fine"><li>Rent collection and owner statements</li><li>Maintenance requests and vendor coordination</li><li>Renewals and move-outs</li></ul><a class="btn sqs-button-element--primary" data-sqsp-button href="#">Owner inquiry</a></div></div>
+      </div></div></div></div>
+    </section>
+
+    <section id="contact-cta" class="page-section" data-section-id="64f0a6" data-sqsp-section="fluid-engine" data-fluid-engine-section data-section-theme="dark">
+      <div class="content-wrapper"><div class="content"><div data-fluid-engine="true"><div class="fluid-engine">
+        <div class="fe-block fe-span-7"><div class="sqs-block" data-sqsp-block="text"><div class="sqs-block-content"><div class="sqs-html-content" data-sqsp-text-block-content><h2>Own a rental in Philadelphia?</h2><p>Sample copy. Tell us about the property and we'll reply within one business day.</p></div></div></div></div>
+        <div class="fe-block fe-span-5"><a class="btn sqs-button-element--primary" data-sqsp-button href="#">Start an owner inquiry</a></div>
+      </div></div></div></div>
+    </section>
+  </article>
+</main>
+<footer class="footer-sections" id="footer-sections"><p>Placeholder footer: brokerage name and office phone as licensed, Equal Housing Opportunity notice.</p></footer>
+
+<script>
+  // Emulates two Squarespace behaviours the snippets have to coexist with:
+  // the mobile menu toggle, and site-wide entrance animations that only run for visible elements.
+  (function () {
+    var header = document.getElementById("header");
+    var burger = document.querySelector(".header-burger-btn");
+    burger.addEventListener("click", function () {
+      var open = header.classList.toggle("header--menu-open");
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    function animateVisible() {
+      var els = document.querySelectorAll(".preFade");
+      for (var i = 0; i < els.length; i++) {
+        var r = els[i].getBoundingClientRect();
+        if (r.width > 0 && r.height > 0 && r.top < innerHeight && r.bottom > 0) {
+          els[i].classList.remove("preFade"); els[i].classList.add("fadeIn");
+        }
+      }
+    }
+    addEventListener("load", animateVisible);
+    addEventListener("scroll", animateVisible, { passive: true });
+  })();
+</script>
+<!-- Assured Philly PM: paste into Settings > Developer Tools > Code Injection > Footer. -->
+<script>
+  // Change labels or links here; everything else can stay as is.
+  window.APM_TABS_CONFIG = {
+    tabs: [ { id: "buy", label: "Buy" }, { id: "sell", label: "Sell" }, { id: "lease", label: "Lease" } ]
+  };
+  window.APM_PORTAL_CONFIG = { label: "Owner Portal", href: "/owner-portal", newTab: false, variant: "outline" };
+</script>
+<style>
+/* Buy / Sell / Lease tabs. Colours fall back to the site's own Squarespace theme variables. */
+.apm-tabs-bar {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 4vw 0.5rem;
+}
+.apm-tabs-bar--in-section { padding: 0.5rem 0; }
+.apm-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  max-width: 100%;
+  padding: 0.3rem;
+  border-radius: 999px;
+  background: var(--apm-tabs-track, hsla(var(--black-hsl, 0, 0%, 0%), 0.07));
+}
+.apm-tab {
+  -webkit-appearance: none;
+  appearance: none;
+  min-height: 44px;
+  min-width: 5.5rem;
+  margin: 0;
+  padding: 0.6em 1.5em;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-family: var(--apm-tabs-font, inherit);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+.apm-tab:hover { background: hsla(var(--black-hsl, 0, 0%, 0%), 0.06); }
+.apm-tab[aria-selected="true"] {
+  background: var(--apm-tab-active-bg, hsl(var(--accent-hsl, 214, 54%, 28%)));
+  color: var(--apm-tab-active-fg, #fff);
+}
+.apm-tab:focus-visible {
+  outline: 3px solid var(--apm-tab-focus, currentColor);
+  outline-offset: 2px;
+}
+/* Squarespace gives page sections display:flex; the attribute alone would not hide them. */
+.apm-tab-hidden { display: none !important; }
+.apm-tab-panel:focus { outline: none; }
+.apm-tab-panel:focus-visible { outline: 3px solid hsl(var(--accent-hsl, 214, 54%, 28%)); outline-offset: -3px; }
+@media (max-width: 400px) {
+  .apm-tab { min-width: 0; padding: 0.6em 1.05em; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .apm-tab-panel:not(.apm-tab-hidden) { animation: apm-tab-in 0.22s ease-out; }
+  @keyframes apm-tab-in { from { opacity: 0.001; } to { opacity: 1; } }
+}
+</style>
+<script>
+/*
+ * Buy / Sell / Lease tabs for Squarespace 7.1 (Fluid Engine) — no plugin, no jQuery.
+ *
+ * Setup in Squarespace (no code beyond this paste):
+ *   1. On the Services page, build three ordinary sections (Buy, Sell, Lease) in Fluid Engine.
+ *   2. Edit Section -> Anchor Link: type  buy , sell , lease  (one per section).
+ *      Squarespace writes the anchor slug as the section's id attribute (documented on
+ *      developers.squarespace.com/custom-code/html), which is how this script finds them.
+ *   3. Optional: add a short blank section above them with Anchor Link  service-tabs .
+ *      The tab bar is placed inside it, so it takes that section's colour theme.
+ *   4. Paste the built snippet into Settings -> Developer Tools -> Code Injection -> Footer
+ *      (Core plan or higher).
+ *
+ * Behaviour:
+ *   - Tabs follow the WAI-ARIA tabs pattern: role=tablist/tab/tabpanel, arrow keys, Home, End.
+ *   - Links such as /services#lease open the Lease tab; clicking a tab updates the URL hash
+ *     without jumping, so each tab can be shared.
+ *   - While you are editing in Squarespace, the script steps aside and all three sections show.
+ *   - With JavaScript off, the three sections simply stack (nothing is hidden by CSS alone).
+ *   - On pages without these anchors the script does nothing.
+ */
+(function () {
+  "use strict";
+
+  var DEFAULTS = {
+    tabs: [
+      { id: "buy", label: "Buy" },
+      { id: "sell", label: "Sell" },
+      { id: "lease", label: "Lease" }
+    ],
+    barSection: "service-tabs", // optional anchor of a section that holds the tab bar
+    ariaLabel: "Services",
+    updateHash: true
+  };
+  var cfg = merge(DEFAULTS, window.APM_TABS_CONFIG || {});
+  var state = null; // { bar, tabs:[{id,label,btn,panel}], active }
+  var ANIM_PRE = ["preFade", "preSlide", "preScale", "preFlex", "preClip"];
+
+  function merge(a, b) {
+    var out = {};
+    for (var k in a) out[k] = a[k];
+    for (var j in b) out[j] = b[j];
+    return out;
+  }
+
+  function isEditing() {
+    var ctx = window.Static && window.Static.SQUARESPACE_CONTEXT;
+    if (ctx && ctx.isEditing) return true;
+    return document.body.classList.contains("sqs-edit-mode-active");
+  }
+
+  function sectionOf(el) {
+    return (el.closest && (el.closest("[data-sqsp-section]") || el.closest("section"))) || el;
+  }
+
+  function findTabs() {
+    var found = [];
+    for (var i = 0; i < cfg.tabs.length; i++) {
+      var t = cfg.tabs[i];
+      var el = document.getElementById(t.id);
+      if (el) found.push({ id: t.id, label: t.label, panel: sectionOf(el) });
+    }
+    return found;
+  }
+
+  function buildBar(tabs) {
+    var bar = document.createElement("div");
+    bar.className = "apm-tabs-bar";
+    bar.setAttribute("data-apm-tabs", "");
+    var list = document.createElement("div");
+    list.className = "apm-tabs";
+    list.setAttribute("role", "tablist");
+    list.setAttribute("aria-label", cfg.ariaLabel);
+    tabs.forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "apm-tab";
+      b.id = "apm-tab-" + t.id;
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-controls", t.panel.id || (t.panel.id = "apm-panel-" + t.id));
+      b.textContent = t.label;
+      list.appendChild(b);
+      t.btn = b;
+    });
+    bar.appendChild(list);
+
+    var holder = cfg.barSection && document.getElementById(cfg.barSection);
+    if (holder) {
+      var host = sectionOf(holder);
+      var wrap = host.querySelector(".content-wrapper") || host;
+      wrap.insertBefore(bar, wrap.firstChild);
+      bar.classList.add("apm-tabs-bar--in-section");
+    } else {
+      var first = tabs[0].panel;
+      first.parentNode.insertBefore(bar, first);
+      bar.classList.add("apm-tabs-bar--standalone");
+    }
+    return { bar: bar, list: list };
+  }
+
+  function wakeAnimations(panel) {
+    // Squarespace's site-wide entrance animations only run for elements that were on screen.
+    // Content inside a hidden tab can be left at its "pre" state (invisible). Give the
+    // platform a moment to animate it, then clear whatever is still waiting.
+    window.setTimeout(function () {
+      ANIM_PRE.forEach(function (cls) {
+        var els = panel.getElementsByClassName(cls);
+        for (var i = els.length - 1; i >= 0; i--) els[i].classList.remove(cls);
+      });
+    }, 450);
+  }
+
+  function select(id, opts) {
+    if (!state) return false;
+    opts = opts || {};
+    var target = null;
+    state.tabs.forEach(function (t) { if (t.id === id) target = t; });
+    if (!target) return false;
+    state.tabs.forEach(function (t) {
+      var on = t === target;
+      t.btn.setAttribute("aria-selected", on ? "true" : "false");
+      t.btn.tabIndex = on ? 0 : -1;
+      t.btn.classList.toggle("is-active", on);
+      if (on) {
+        t.panel.removeAttribute("hidden");
+        t.panel.classList.remove("apm-tab-hidden");
+      } else {
+        t.panel.setAttribute("hidden", "");
+        t.panel.classList.add("apm-tab-hidden");
+      }
+    });
+    state.active = target.id;
+    if (opts.focus) target.btn.focus();
+    if (opts.updateHash && cfg.updateHash && window.history && history.replaceState) {
+      history.replaceState(null, "", "#" + target.id);
+    }
+    if (opts.scroll) state.bar.scrollIntoView({ block: "start" });
+    // Lets Squarespace's image loader and any layout scripts size the newly shown section.
+    window.dispatchEvent(new Event("resize"));
+    wakeAnimations(target.panel);
+    return true;
+  }
+
+  function onKey(e) {
+    var keys = ["ArrowRight", "ArrowLeft", "Home", "End"];
+    if (keys.indexOf(e.key) < 0) return;
+    var i = 0;
+    state.tabs.forEach(function (t, n) { if (t.id === state.active) i = n; });
+    var n = state.tabs.length;
+    if (e.key === "ArrowRight") i = (i + 1) % n;
+    if (e.key === "ArrowLeft") i = (i - 1 + n) % n;
+    if (e.key === "Home") i = 0;
+    if (e.key === "End") i = n - 1;
+    e.preventDefault();
+    select(state.tabs[i].id, { focus: true, updateHash: true });
+  }
+
+  function onHash() {
+    var id = decodeURIComponent((location.hash || "").slice(1));
+    if (state && id && id !== state.active) select(id, { scroll: true });
+  }
+
+  function init() {
+    if (state || isEditing()) return false;
+    var tabs = findTabs();
+    if (tabs.length < 2) return false; // not the Services page
+    var built = buildBar(tabs);
+    tabs.forEach(function (t) {
+      t.panel.setAttribute("role", "tabpanel");
+      t.panel.setAttribute("aria-labelledby", t.btn.id);
+      t.panel.setAttribute("tabindex", "0");
+      t.panel.classList.add("apm-tab-panel");
+      t.btn.addEventListener("click", function () { select(t.id, { updateHash: true }); });
+    });
+    built.list.addEventListener("keydown", onKey);
+    state = { bar: built.bar, tabs: tabs, active: null };
+    var fromHash = decodeURIComponent((location.hash || "").slice(1));
+    var first = tabs.some(function (t) { return t.id === fromHash; }) ? fromHash : tabs[0].id;
+    select(first, { scroll: first === fromHash });
+    window.addEventListener("hashchange", onHash);
+    document.documentElement.classList.add("apm-tabs-ready");
+    return true;
+  }
+
+  function destroy() {
+    if (!state) return false;
+    window.removeEventListener("hashchange", onHash);
+    state.tabs.forEach(function (t) {
+      t.panel.removeAttribute("hidden");
+      t.panel.removeAttribute("role");
+      t.panel.removeAttribute("aria-labelledby");
+      t.panel.removeAttribute("tabindex");
+      t.panel.classList.remove("apm-tab-hidden", "apm-tab-panel");
+    });
+    if (state.bar.parentNode) state.bar.parentNode.removeChild(state.bar);
+    state = null;
+    document.documentElement.classList.remove("apm-tabs-ready");
+    return true;
+  }
+
+  function watchEditor() {
+    // The Squarespace editor shows the site in a frame and adds this class when you click Edit.
+    if (window.self === window.top || !window.MutationObserver) return;
+    new MutationObserver(function () {
+      if (isEditing()) destroy();
+      else if (!state) init();
+    }).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+  }
+
+  window.APMTabs = {
+    init: init,
+    destroy: destroy,
+    select: function (id) { return select(id, { updateHash: true }); },
+    active: function () { return state ? state.active : null; }
+  };
+
+  function start() { init(); watchEditor(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+</script>
+<style>
+/* Tenant Portal + Owner Portal side by side; stacked full-width in the mobile menu. */
+.header-actions-action--cta.apm-portal-pair {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header-menu-cta.apm-portal-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.header-menu-cta.apm-portal-pair > a { width: 100%; text-align: center; box-sizing: border-box; }
+.apm-portal--outline {
+  background: transparent !important;
+  color: inherit !important;
+  border: 2px solid currentColor !important;
+}
+</style>
+<script>
+/*
+ * Second header button for Squarespace 7.1 (Tenant Portal + Owner Portal).
+ *
+ * Squarespace 7.1's site header holds one call-to-action button. Turn that one on as
+ * "Tenant Portal" (Edit Site Header -> Add Elements -> Button). This script copies it — so it
+ * keeps your site's button style — and adds "Owner Portal" next to it, in the desktop header
+ * and in the mobile menu.
+ *
+ * When the portals go live (AppFolio, Buildium, TenantCloud...), change the native button's
+ * link in the header editor and the href below. Nothing else changes.
+ */
+(function () {
+  "use strict";
+
+  var DEFAULTS = {
+    label: "Owner Portal",
+    href: "/owner-portal",
+    newTab: false,
+    variant: "outline" // "outline" or "same" (identical to the native button)
+  };
+  var cfg = merge(DEFAULTS, window.APM_PORTAL_CONFIG || {});
+  var SLOTS = ".header-actions-action--cta, .header-menu-cta";
+
+  function merge(a, b) {
+    var out = {};
+    for (var k in a) out[k] = a[k];
+    for (var j in b) out[j] = b[j];
+    return out;
+  }
+
+  function isEditing() {
+    var ctx = window.Static && window.Static.SQUARESPACE_CONTEXT;
+    if (ctx && ctx.isEditing) return true;
+    return document.body.classList.contains("sqs-edit-mode-active");
+  }
+
+  function add() {
+    if (isEditing()) return 0;
+    var added = 0;
+    var slots = document.querySelectorAll(SLOTS);
+    for (var i = 0; i < slots.length; i++) {
+      var slot = slots[i];
+      if (slot.querySelector("[data-apm-portal]")) continue; // already done
+      var native = slot.querySelector("a");
+      if (!native) continue;
+      var copy = native.cloneNode(true);
+      copy.removeAttribute("id");
+      copy.setAttribute("data-apm-portal", "owner");
+      copy.textContent = cfg.label;
+      copy.setAttribute("href", cfg.href);
+      if (cfg.newTab) {
+        copy.setAttribute("target", "_blank");
+        copy.setAttribute("rel", "noopener");
+      } else {
+        copy.removeAttribute("target");
+      }
+      if (cfg.variant === "outline") copy.classList.add("apm-portal--outline");
+      native.setAttribute("data-apm-portal-native", "");
+      native.parentNode.insertBefore(copy, native.nextSibling);
+      slot.classList.add("apm-portal-pair");
+      added++;
+    }
+    return added;
+  }
+
+  function remove() {
+    var made = document.querySelectorAll("[data-apm-portal]");
+    for (var i = 0; i < made.length; i++) made[i].parentNode.removeChild(made[i]);
+    var pairs = document.querySelectorAll(".apm-portal-pair");
+    for (var j = 0; j < pairs.length; j++) pairs[j].classList.remove("apm-portal-pair");
+    return made.length;
+  }
+
+  function watchEditor() {
+    if (window.self === window.top || !window.MutationObserver) return;
+    new MutationObserver(function () { if (isEditing()) remove(); else add(); })
+      .observe(document.body, { attributes: true, attributeFilter: ["class"] });
+  }
+
+  window.APMPortals = { add: add, remove: remove };
+  function start() { add(); watchEditor(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
+})();
+</script>
+
+</body>
+</html>

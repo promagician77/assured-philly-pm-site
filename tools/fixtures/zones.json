@@ -1,0 +1,3678 @@
+{
+ "shared": {
+  "_spf.google.com|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "_spf.google.com.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "_spf.google.com.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 include:_netblocks.google.com include:_netblocks2.google.com include:_netblocks3.google.com ~all\""
+    }
+   ]
+  },
+  "_netblocks.google.com|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "_netblocks.google.com.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "_netblocks.google.com.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:35.190.247.0/24 ip4:64.233.160.0/19 ~all\""
+    }
+   ]
+  },
+  "_netblocks2.google.com|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "_netblocks2.google.com.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "_netblocks2.google.com.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip6:2001:4860:4000::/36 ~all\""
+    }
+   ]
+  },
+  "_netblocks3.google.com|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "_netblocks3.google.com.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "_netblocks3.google.com.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:172.217.0.0/19 ~all\""
+    }
+   ]
+  },
+  "spf.outlook.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "spf.outlook.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "spf.outlook.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:40.92.0.0/15 -all\""
+    }
+   ]
+  },
+  "nothing-here.example|TXT": {
+   "Status": 3,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "Question": [
+    {
+     "name": "nothing-here.example.",
+     "type": 16
+    }
+   ]
+  },
+  "spf.crm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "spf.crm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "spf.crm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 include:a.crm.example include:b.crm.example ~all\""
+    }
+   ]
+  },
+  "a.crm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "a.crm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "a.crm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:192.0.2.0/24 ~all\""
+    }
+   ]
+  },
+  "b.crm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "b.crm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "b.crm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:198.51.100.0/24 ~all\""
+    }
+   ]
+  },
+  "spf.mailer.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "spf.mailer.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "spf.mailer.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 include:a.mailer.example include:b.mailer.example ~all\""
+    }
+   ]
+  },
+  "a.mailer.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "a.mailer.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "a.mailer.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:192.0.2.0/24 ~all\""
+    }
+   ]
+  },
+  "b.mailer.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "b.mailer.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "b.mailer.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:198.51.100.0/24 ~all\""
+    }
+   ]
+  },
+  "spf.pm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "spf.pm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "spf.pm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 include:a.pm.example include:b.pm.example ~all\""
+    }
+   ]
+  },
+  "a.pm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "a.pm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "a.pm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:192.0.2.0/24 ~all\""
+    }
+   ]
+  },
+  "b.pm.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "b.pm.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "b.pm.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:198.51.100.0/24 ~all\""
+    }
+   ]
+  },
+  "spf.phone.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "spf.phone.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "spf.phone.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 include:a.phone.example include:b.phone.example ~all\""
+    }
+   ]
+  },
+  "a.phone.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "a.phone.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "a.phone.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:192.0.2.0/24 ~all\""
+    }
+   ]
+  },
+  "b.phone.example|TXT": {
+   "Status": 0,
+   "TC": false,
+   "RD": true,
+   "RA": true,
+   "AD": false,
+   "CD": false,
+   "Question": [
+    {
+     "name": "b.phone.example.",
+     "type": 16
+    }
+   ],
+   "Answer": [
+    {
+     "name": "b.phone.example.",
+     "type": 16,
+     "TTL": 3600,
+     "data": "\"v=spf1 ip4:198.51.100.0/24 ~all\""
+    }
+   ]
+  }
+ },
+ "scenarios": [
+  {
+   "name": "not-started",
+   "desc": "Squarespace site connected, no email records yet",
+   "domain": "not-started.example",
+   "zone": {
+    "not-started.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "not-started.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "not-started.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "not-started.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "not-started.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "not-started.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "not-started.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "not-started.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "not-started.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "not-started.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.not-started.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.not-started.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.not-started.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "not-started.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "not-started.example.",
+       "type": 15
+      }
+     ],
+     "Answer": []
+    },
+    "not-started.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "not-started.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "not-started.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      }
+     ]
+    },
+    "google._domainkey.not-started.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.not-started.example.",
+       "type": 16
+      }
+     ],
+     "Answer": []
+    },
+    "_dmarc.not-started.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.not-started.example.",
+       "type": 16
+      }
+     ],
+     "Answer": []
+    }
+   },
+   "expect": {
+    "website": "pass",
+    "mx": "fail",
+    "spf": "fail",
+    "dkim": "fail",
+    "dmarc": "warn",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "complete",
+   "desc": "MX + SPF + 2048-bit DKIM + DMARC p=none with reports",
+   "domain": "complete.example",
+   "zone": {
+    "complete.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "complete.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "complete.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "complete.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "complete.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "complete.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "complete.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "complete.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "complete.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "complete.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.complete.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.complete.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.complete.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "complete.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "complete.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "complete.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "complete.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "complete.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "complete.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "complete.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.complete.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.complete.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.complete.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.complete.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.complete.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.complete.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@complete.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "website": "pass",
+    "mx": "pass",
+    "spf": "pass",
+    "dkim": "pass",
+    "dmarc": "pass",
+    "mailReady": true,
+    "lookups": 4,
+    "bits": 2048
+   }
+  },
+  {
+   "name": "legacy-mx",
+   "desc": "The five legacy ASPMX records",
+   "domain": "legacy-mx.example",
+   "zone": {
+    "legacy-mx.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "legacy-mx.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.legacy-mx.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.legacy-mx.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.legacy-mx.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "legacy-mx.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 aspmx.l.google.com."
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "5 alt1.aspmx.l.google.com."
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "5 alt2.aspmx.l.google.com."
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "10 alt3.aspmx.l.google.com."
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "10 alt4.aspmx.l.google.com."
+      }
+     ]
+    },
+    "legacy-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "legacy-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "legacy-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.legacy-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.legacy-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.legacy-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.legacy-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.legacy-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.legacy-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@legacy-mx.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "mx": "pass",
+    "mailReady": true
+   }
+  },
+  {
+   "name": "mixed-mx",
+   "desc": "Google MX left beside an old host's MX",
+   "domain": "mixed-mx.example",
+   "zone": {
+    "mixed-mx.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "mixed-mx.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.mixed-mx.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.mixed-mx.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.mixed-mx.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "mixed-mx.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "10 mx.oldhost.example."
+      }
+     ]
+    },
+    "mixed-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "mixed-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "mixed-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.mixed-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.mixed-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.mixed-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.mixed-mx.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.mixed-mx.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.mixed-mx.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@mixed-mx.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "mx": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "two-spf",
+   "desc": "Two SPF records (Google + a second sender added separately)",
+   "domain": "two-spf.example",
+   "zone": {
+    "two-spf.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "two-spf.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "two-spf.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "two-spf.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "two-spf.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "two-spf.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "two-spf.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "two-spf.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "two-spf.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "two-spf.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.two-spf.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.two-spf.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.two-spf.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "two-spf.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "two-spf.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "two-spf.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "two-spf.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "two-spf.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "two-spf.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      },
+      {
+       "name": "two-spf.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:spf.crm.example ~all\""
+      }
+     ]
+    },
+    "google._domainkey.two-spf.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.two-spf.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.two-spf.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.two-spf.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.two-spf.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.two-spf.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@two-spf.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "spf-no-google",
+   "desc": "SPF that authorises another provider but not Google",
+   "domain": "spf-no-google.example",
+   "zone": {
+    "spf-no-google.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "spf-no-google.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "spf-no-google.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "spf-no-google.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "spf-no-google.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "spf-no-google.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.spf-no-google.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.spf-no-google.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.spf-no-google.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "spf-no-google.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "spf-no-google.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-google.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:spf.outlook.example ~all\""
+      }
+     ]
+    },
+    "google._domainkey.spf-no-google.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.spf-no-google.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.spf-no-google.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.spf-no-google.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.spf-no-google.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.spf-no-google.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@spf-no-google.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "spf-too-many",
+   "desc": "Google plus four senders with nested includes: 16 lookups",
+   "domain": "spf-too-many.example",
+   "zone": {
+    "spf-too-many.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "spf-too-many.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "spf-too-many.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "spf-too-many.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "spf-too-many.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "spf-too-many.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.spf-too-many.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.spf-too-many.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.spf-too-many.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "spf-too-many.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "spf-too-many.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-too-many.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com include:spf.crm.example include:spf.mailer.example include:spf.pm.example include:spf.phone.example ~all\""
+      }
+     ]
+    },
+    "google._domainkey.spf-too-many.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.spf-too-many.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.spf-too-many.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.spf-too-many.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.spf-too-many.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.spf-too-many.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@spf-too-many.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "fail",
+    "mailReady": false,
+    "lookups": 16
+   }
+  },
+  {
+   "name": "spf-plus-all",
+   "desc": "SPF ending in +all",
+   "domain": "spf-plus-all.example",
+   "zone": {
+    "spf-plus-all.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "spf-plus-all.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "spf-plus-all.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "spf-plus-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "spf-plus-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "spf-plus-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.spf-plus-all.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.spf-plus-all.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.spf-plus-all.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "spf-plus-all.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "spf-plus-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-plus-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com +all\""
+      }
+     ]
+    },
+    "google._domainkey.spf-plus-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.spf-plus-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.spf-plus-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.spf-plus-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.spf-plus-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.spf-plus-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@spf-plus-all.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "spf-no-all",
+   "desc": "SPF without a closing all term",
+   "domain": "spf-no-all.example",
+   "zone": {
+    "spf-no-all.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "spf-no-all.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "spf-no-all.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "spf-no-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "spf-no-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "spf-no-all.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.spf-no-all.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.spf-no-all.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.spf-no-all.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "spf-no-all.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "spf-no-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-no-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com\""
+      }
+     ]
+    },
+    "google._domainkey.spf-no-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.spf-no-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.spf-no-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.spf-no-all.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.spf-no-all.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.spf-no-all.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@spf-no-all.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "warn",
+    "mailReady": true
+   }
+  },
+  {
+   "name": "spf-include-missing",
+   "desc": "SPF include pointing at a name with no SPF record",
+   "domain": "spf-include-missing.example",
+   "zone": {
+    "spf-include-missing.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "spf-include-missing.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "spf-include-missing.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "spf-include-missing.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "spf-include-missing.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "spf-include-missing.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.spf-include-missing.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.spf-include-missing.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.spf-include-missing.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "spf-include-missing.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "spf-include-missing.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "spf-include-missing.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com include:nothing-here.example ~all\""
+      }
+     ]
+    },
+    "google._domainkey.spf-include-missing.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.spf-include-missing.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.spf-include-missing.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.spf-include-missing.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.spf-include-missing.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.spf-include-missing.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@spf-include-missing.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "dkim-1024",
+   "desc": "1024-bit DKIM key",
+   "domain": "dkim-1024.example",
+   "zone": {
+    "dkim-1024.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "dkim-1024.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "dkim-1024.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "dkim-1024.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "dkim-1024.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "dkim-1024.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.dkim-1024.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.dkim-1024.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.dkim-1024.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "dkim-1024.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "dkim-1024.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-1024.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "dkim-1024.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.dkim-1024.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.dkim-1024.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.dkim-1024.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDAJRUofdCGKmyjAXhyTe1W0A9hMP3PSyl0I72jKM6u5wwMW9tNhemOb9HDgS+AYVfyczjS6zSqla1asd89l6ImLSq6gO0JbRLUqqUeIosRaPsg+y0QZVnPscfdWh1EZG67D5qvfiyNbO+c7vC32osDIZrzSoxGoBDtvnL8Sguy1wIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.dkim-1024.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.dkim-1024.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.dkim-1024.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@dkim-1024.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "dkim": "warn",
+    "mailReady": true,
+    "bits": 1024
+   }
+  },
+  {
+   "name": "dkim-revoked",
+   "desc": "DKIM record with an empty key",
+   "domain": "dkim-revoked.example",
+   "zone": {
+    "dkim-revoked.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "dkim-revoked.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "dkim-revoked.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "dkim-revoked.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "dkim-revoked.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "dkim-revoked.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.dkim-revoked.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.dkim-revoked.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.dkim-revoked.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "dkim-revoked.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "dkim-revoked.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dkim-revoked.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "dkim-revoked.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.dkim-revoked.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.dkim-revoked.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.dkim-revoked.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=\""
+      }
+     ]
+    },
+    "_dmarc.dkim-revoked.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.dkim-revoked.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.dkim-revoked.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@dkim-revoked.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "dkim": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "dmarc-missing-p",
+   "desc": "DMARC record with no policy tag",
+   "domain": "dmarc-missing-p.example",
+   "zone": {
+    "dmarc-missing-p.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "dmarc-missing-p.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.dmarc-missing-p.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.dmarc-missing-p.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.dmarc-missing-p.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "dmarc-missing-p.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "dmarc-missing-p.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "dmarc-missing-p.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.dmarc-missing-p.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.dmarc-missing-p.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.dmarc-missing-p.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.dmarc-missing-p.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.dmarc-missing-p.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.dmarc-missing-p.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; rua=mailto:dmarc@dmarc-missing-p.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "dmarc": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "dmarc-two",
+   "desc": "Two DMARC records",
+   "domain": "dmarc-two.example",
+   "zone": {
+    "dmarc-two.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "dmarc-two.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "dmarc-two.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "dmarc-two.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "dmarc-two.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "dmarc-two.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.dmarc-two.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.dmarc-two.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.dmarc-two.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "dmarc-two.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "dmarc-two.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-two.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "dmarc-two.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.dmarc-two.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.dmarc-two.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.dmarc-two.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.dmarc-two.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.dmarc-two.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.dmarc-two.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none\""
+      },
+      {
+       "name": "_dmarc.dmarc-two.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=reject\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "dmarc": "fail",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "dmarc-reject-no-rua",
+   "desc": "DMARC p=reject without a report address",
+   "domain": "dmarc-reject-no-rua.example",
+   "zone": {
+    "dmarc-reject-no-rua.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "dmarc-reject-no-rua.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.dmarc-reject-no-rua.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.dmarc-reject-no-rua.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.dmarc-reject-no-rua.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "dmarc-reject-no-rua.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "dmarc-reject-no-rua.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "dmarc-reject-no-rua.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.dmarc-reject-no-rua.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.dmarc-reject-no-rua.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.dmarc-reject-no-rua.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.dmarc-reject-no-rua.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.dmarc-reject-no-rua.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.dmarc-reject-no-rua.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=reject\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "dmarc": "warn",
+    "mailReady": true
+   }
+  },
+  {
+   "name": "site-elsewhere",
+   "desc": "Domain still pointing at a parking page",
+   "domain": "site-elsewhere.example",
+   "zone": {
+    "site-elsewhere.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "site-elsewhere.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "site-elsewhere.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "203.0.113.10"
+      }
+     ]
+    },
+    "www.site-elsewhere.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.site-elsewhere.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.site-elsewhere.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "parking.registrar.example."
+      }
+     ]
+    },
+    "site-elsewhere.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "site-elsewhere.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "site-elsewhere.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"google-site-verification=fixture-token\""
+      },
+      {
+       "name": "site-elsewhere.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=spf1 include:_spf.google.com ~all\""
+      }
+     ]
+    },
+    "google._domainkey.site-elsewhere.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "google._domainkey.site-elsewhere.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "google._domainkey.site-elsewhere.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2xEWr9AqlhRteRFMU3VnN11MoJ/7vExrDGXkNS2lV6w0mzS6+mX6Oz+dNUmKidZ5IN5j1K+BMXsdc2z3xQFDA21k+tCYGQQGL/u/TvFzzu+M478GVe/Ia+Z7A9KyBwYmP+tU0XkFhSmn2KzCDVjd/kDHjwnWThYmUrx3cgeBvrWfppFSYiTol+Ti1JwnBv5Y2\" \"kOMhy7AvtNGE14ER+hEhyuY5fLXodJ1OofWCqiUvO8WJ1BzMulSO9MCx3PmHizPPcDkjPkxbIumY/HqwlM6O+Yc/gCST+QB+hHXigvvlkYKBeuv7JhTsMIrcwFWO+N13x0DzyqQdKdLe1AEbbBGIwIDAQAB\""
+      }
+     ]
+    },
+    "_dmarc.site-elsewhere.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.site-elsewhere.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.site-elsewhere.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@site-elsewhere.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "website": "warn",
+    "mailReady": true
+   }
+  },
+  {
+   "name": "resolver-error",
+   "desc": "Resolver fails on the TXT lookups",
+   "domain": "resolver-error.example",
+   "zone": {
+    "resolver-error.example|NS": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "resolver-error.example.",
+       "type": 2
+      }
+     ],
+     "Answer": [
+      {
+       "name": "resolver-error.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a1.googledomains.com."
+      },
+      {
+       "name": "resolver-error.example.",
+       "type": 2,
+       "TTL": 3600,
+       "data": "ns-cloud-a2.googledomains.com."
+      }
+     ]
+    },
+    "resolver-error.example|A": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "resolver-error.example.",
+       "type": 1
+      }
+     ],
+     "Answer": [
+      {
+       "name": "resolver-error.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.144"
+      },
+      {
+       "name": "resolver-error.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.185.159.145"
+      },
+      {
+       "name": "resolver-error.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.144"
+      },
+      {
+       "name": "resolver-error.example.",
+       "type": 1,
+       "TTL": 3600,
+       "data": "198.49.23.145"
+      }
+     ]
+    },
+    "www.resolver-error.example|CNAME": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "www.resolver-error.example.",
+       "type": 5
+      }
+     ],
+     "Answer": [
+      {
+       "name": "www.resolver-error.example.",
+       "type": 5,
+       "TTL": 3600,
+       "data": "ext-cust.squarespace.com."
+      }
+     ]
+    },
+    "resolver-error.example|MX": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "resolver-error.example.",
+       "type": 15
+      }
+     ],
+     "Answer": [
+      {
+       "name": "resolver-error.example.",
+       "type": 15,
+       "TTL": 3600,
+       "data": "1 smtp.google.com."
+      }
+     ]
+    },
+    "resolver-error.example|TXT": {
+     "Status": 2,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "Question": [
+      {
+       "name": "resolver-error.example.",
+       "type": 16
+      }
+     ]
+    },
+    "google._domainkey.resolver-error.example|TXT": {
+     "Status": 2,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "Question": [
+      {
+       "name": "google._domainkey.resolver-error.example.",
+       "type": 16
+      }
+     ]
+    },
+    "_dmarc.resolver-error.example|TXT": {
+     "Status": 0,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "AD": false,
+     "CD": false,
+     "Question": [
+      {
+       "name": "_dmarc.resolver-error.example.",
+       "type": 16
+      }
+     ],
+     "Answer": [
+      {
+       "name": "_dmarc.resolver-error.example.",
+       "type": 16,
+       "TTL": 3600,
+       "data": "\"v=DMARC1; p=none; rua=mailto:dmarc@resolver-error.example\""
+      }
+     ]
+    }
+   },
+   "expect": {
+    "spf": "unknown",
+    "dkim": "unknown",
+    "mailReady": false
+   }
+  },
+  {
+   "name": "no-such-domain",
+   "desc": "Domain that does not exist",
+   "domain": "no-such-domain.example",
+   "zone": {
+    "no-such-domain.example|NS": {
+     "Status": 3,
+     "TC": false,
+     "RD": true,
+     "RA": true,
+     "Question": [
+      {
+       "name": "no-such-domain.example.",
+       "type": 2
+      }
+     ]
+    }
+   },
+   "expect": {
+    "domain": "fail",
+    "mailReady": false
+   }
+  }
+ ]
+}

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Assured Philly PM: website and email, worked out before the build</title>
+<meta name="description" content="Buy / Sell / Lease tabs and two portal buttons for Squarespace 7.1, plus a live email-record check for assuredphillypm.com. Built and tested before the job starts.">
+<link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314213d'/%3E%3Cpath d='M7 25V14l9-7 9 7v11h-6v-7h-6v7z' fill='%23f2c230'/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="strip">
+  <div class="wrap strip-in">
+    <p>Prepared for the Assured Philly PM build: Squarespace 7.1 and Google Workspace. Hidden from search engines.</p>
+    <a class="strip-dl" href="downloads/assured-philly-pm-kit.zip" download>Download the kit (.zip)</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Your website and email, worked out before the build</h1>
+      <p class="lede">Three pieces of your post are already built and tested: the Buy / Sell / Lease tabs, Tenant and Owner portal buttons for the header, and the email records for assuredphillypm.com.</p>
+      <p class="measured" id="measured">Measured here: <b data-k="browser"></b> browser checks pass, <b data-k="axe"></b> accessibility violations in an axe-core WCAG 2.1 AA scan, and the email checker returns <b data-k="verdicts"></b> expected verdicts across <b data-k="scenarios"></b> recorded DNS setups.</p>
+      <ul class="jump">
+        <li><a href="#tabs">See the tabs working</a></li>
+        <li><a href="#portals">The two portal buttons</a></li>
+        <li><a href="#email">Email setup, step by step</a></li>
+        <li><a href="#pages">The four pages</a></li>
+      </ul>
+    </div>
+
+    <section class="check" id="check" aria-labelledby="check-title">
+      <h2 id="check-title" class="check-title"><span data-domain>assuredphillypm.com</span> right now</h2>
+      <form class="check-form" id="check-form">
+        <label for="domain">Domain</label>
+        <div class="check-row">
+          <input id="domain" name="domain" value="assuredphillypm.com" autocomplete="off" spellcheck="false" inputmode="url">
+          <button type="submit">Check again</button>
+        </div>
+      </form>
+      <p class="check-sum" id="check-sum" aria-live="polite">Reading the public DNS records…</p>
+      <ol class="check-list" id="check-list" aria-live="polite"></ol>
+      <p class="check-note">Looked up from your browser through Google Public DNS, with Cloudflare as a fallback. Nothing is sent to me or stored. <span id="check-time"></span></p>
+    </section>
+  </div>
+</section>
+
+<section class="band" id="tabs" aria-labelledby="tabs-title">
+  <div class="wrap two">
+    <div class="prose">
+      <h2 id="tabs-title">Buy, Sell and Lease as tabs you still edit visually</h2>
+      <p>Squarespace 7.1 has no tabs block, so this is a short script for Code Injection, which your Core plan includes. It holds none of your content. Each tab is an ordinary Fluid Engine section, so text, photos and buttons are edited the normal way.</p>
+      <h3>Setup in your Squarespace account</h3>
+      <ol class="steps">
+        <li>Give the three sections the anchor links <code>buy</code>, <code>sell</code> and <code>lease</code> (Edit Section, then Anchor Link).</li>
+        <li>Optionally add a slim section above them with the anchor <code>service-tabs</code>. The tab bar sits inside it and takes its colours.</li>
+        <li>Paste one block into Settings, Developer Tools, Code Injection, Footer.</li>
+      </ol>
+      <h3>What it does</h3>
+      <ul class="plain">
+        <li>A link such as <code>/services#lease</code> opens that tab, so a Home page button can go straight to leasing.</li>
+        <li>Arrow keys, Home and End move between tabs; screen readers hear real tabs.</li>
+        <li>While you edit in Squarespace, the tabs step aside and all three sections show.</li>
+        <li>With JavaScript off, the sections simply stack. Nothing is hidden by CSS alone.</li>
+      </ul>
+      <p class="small">Size: <b data-k="gzip"></b> compressed for both snippets together.</p>
+    </div>
+    <figure class="demo">
+      <div class="demo-bar" role="group" aria-label="Demo controls">
+        <button type="button" data-act="lease">Open /services#lease</button>
+        <button type="button" data-act="phone" aria-pressed="false">Phone width</button>
+        <button type="button" data-act="edit" aria-pressed="false">What you see while editing</button>
+      </div>
+      <div class="demo-frame" id="demo-frame">
+        <iframe id="demo" src="demo/services.html" title="Demo Services page with the tabs snippet" loading="lazy"></iframe>
+      </div>
+      <figcaption>A page built the way Squarespace 7.1 structures one, with the snippet pasted in. Placeholder brand and sample copy. <a href="demo/services.html" target="_blank" rel="noopener">Open it full size</a>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band band-tint" id="portals" aria-labelledby="portals-title">
+  <div class="wrap portal-grid">
+    <div>
+      <div class="prose">
+        <h2 id="portals-title">Two portal buttons in a header that allows one</h2>
+        <p>The Squarespace 7.1 header has a single button. You switch it on as Tenant Portal; the snippet copies it, so Owner Portal matches your button style on desktop and in the phone menu. Until the portals exist, both go to a short "coming soon" page. When you choose AppFolio, Buildium or TenantCloud, two links change and nothing else.</p>
+      </div>
+      <figure class="shot shot-wide"><img src="img/header-desktop.webp" width="1280" height="152" alt="Desktop header with a filled Tenant Portal button and an outlined Owner Portal button"><figcaption>Desktop header, right side</figcaption></figure>
+    </div>
+    <figure class="shot shot-phone"><img src="img/mobile-menu.webp" width="375" height="812" alt="Phone menu with Tenant Portal and Owner Portal buttons stacked at full width"><figcaption>Phone menu</figcaption></figure>
+  </div>
+</section>
+
+<section class="band" id="email" aria-labelledby="email-title">
+  <div class="wrap">
+    <div class="prose narrow">
+      <h2 id="email-title">Email in three visits, because Google builds in two waits</h2>
+      <p>Google won't issue the DKIM key until Gmail has been on for 24 to 72 hours, and asks for 48 hours after SPF and DKIM before DMARC goes in. Rushed into one sitting, the setup would ship without the signature that ties your mail to assuredphillypm.com.</p>
+    </div>
+    <ol class="visits">
+      <li>
+        <h3>Visit 1</h3>
+        <p>Verify the domain, point MX at Google, publish one SPF record, create contact@ and info@, and turn on "Send mail as" so replies leave from contact@.</p>
+      </li>
+      <li>
+        <h3>Visit 2, 24 to 72 hours after Gmail is on</h3>
+        <p>Generate a 2048-bit DKIM key in the Admin console, publish it at google._domainkey, then start authentication.</p>
+      </li>
+      <li>
+        <h3>Visit 3, 48 hours after SPF and DKIM</h3>
+        <p>Add DMARC in monitoring mode with a report address, then send a test to a personal Gmail and read "Show original": SPF, DKIM and DMARC must all say PASS.</p>
+      </li>
+    </ol>
+
+    <div class="table-wrap">
+      <table class="records">
+        <caption>The records, in the order they go in</caption>
+        <thead><tr><th scope="col">Visit</th><th scope="col">Type</th><th scope="col">Host</th><th scope="col">Value</th><th scope="col"><span class="vh">Copy</span></th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>MX</td><td><code>@</code></td><td><code>smtp.google.com</code> <span class="small">priority 1; delete any other MX</span></td><td><button type="button" class="copy" data-copy="smtp.google.com">Copy</button></td></tr>
+          <tr><td>1</td><td>TXT</td><td><code>@</code></td><td><code>v=spf1 include:_spf.google.com ~all</code></td><td><button type="button" class="copy" data-copy="v=spf1 include:_spf.google.com ~all">Copy</button></td></tr>
+          <tr><td>2</td><td>TXT</td><td><code>google._domainkey</code></td><td><code>v=DKIM1; k=rsa; p=…</code> <span class="small">your 2048-bit key from the Admin console</span></td><td></td></tr>
+          <tr><td>3</td><td>TXT</td><td><code>_dmarc</code></td><td><code>v=DMARC1; p=none; rua=mailto:dmarc@assuredphillypm.com</code></td><td><button type="button" class="copy" data-copy="v=DMARC1; p=none; rua=mailto:dmarc@assuredphillypm.com">Copy</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="two notes">
+      <p><b>contact@ and info@.</b> An alias delivers to one person's inbox. A Google Group lets several people see and answer the same mail. Which fits depends on who answers owner inquiries.</p>
+      <p><b>One SPF record, always.</b> When AppFolio, Buildium, a CRM or an email tool later sends as your domain, its entry joins the existing record. A second SPF record makes SPF fail for every message, and the checker above flags it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-tint" id="pages" aria-labelledby="pages-title">
+  <div class="wrap">
+    <div class="prose narrow">
+      <h2 id="pages-title">Four pages, planned around owners and renters</h2>
+      <p>Your logo, colours and copy go in as supplied. Every section also gets its own phone layout, which Fluid Engine keeps separate from desktop.</p>
+    </div>
+    <dl class="pages">
+      <div><dt>Home</dt><dd>One line for owners, one for renters, and two buttons: owner inquiry and current rentals. Service summaries link straight into the matching tab.</dd></div>
+      <div><dt>Services</dt><dd>Intro, the tab bar, then Buy, Sell and Lease as three editable sections.</dd></div>
+      <div><dt>Current Rentals</dt><dd>One item per unit (photos, rent, beds and baths, available date, request a showing) so new units appear automatically. Later this section can switch to your platform's listings feed, so units are entered once. A link to your written tenant screening criteria sits on the page: Philadelphia's Renters' Access Act requires landlords to provide them before taking an application or fee.</dd></div>
+      <div><dt>Contact and owner inquiry</dt><dd>An owner form (property, units, occupancy, what you need) that emails contact@ and copies each inquiry to a Google Sheet as a backup. Zapier storage can feed a CRM later.</dd></div>
+    </dl>
+    <p class="small footnote">Footer on every page: your licensed brokerage name and office phone (Pennsylvania's advertising rule, 49 Pa. Code § 35.305) and the Equal Housing Opportunity notice. I'm not a lawyer; the wording should be confirmed with your broker of record.</p>
+  </div>
+</section>
+
+<section class="band" id="tested" aria-labelledby="tested-title">
+  <div class="wrap">
+    <div class="prose narrow">
+      <h2 id="tested-title">What was tested, and what wasn't</h2>
+      <p>Headless Chromium (<span data-k="chromium"></span>) with axe-core <span data-k="axever"></span>. To prove the tests can fail, <b data-k="mutations"></b> deliberately planted bugs were each caught.</p>
+    </div>
+    <div class="two tested">
+      <div>
+        <h3>Snippets: <span data-k="browser"></span> checks</h3>
+        <ul class="results" id="browser-results"></ul>
+      </div>
+      <div>
+        <h3>Email checker: <span data-k="scenarioline"></span></h3>
+        <ul class="results" id="checker-results"></ul>
+        <h3 class="mt">Not measured</h3>
+        <ul class="plain">
+          <li>Your Squarespace account. The tabs were tested on a page built from Squarespace's documented section attributes and the header classes plugins target, not inside your site.</li>
+          <li>Your domain's records. My build machine can't query public DNS, so the live check reads them in your browser instead.</li>
+          <li>Real Gmail delivery. That needs your Workspace; it's the "Show original" test in visit 3.</li>
+          <li>Safari and Firefox. Every test ran in Chromium.</li>
+          <li>Squarespace's own entrance animations and image loader. The test page imitates them.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <h2 class="foot-title">Sources</h2>
+    <ul class="sources">
+      <li><a href="https://developers.squarespace.com/custom-code/html">Squarespace: HTML attributes (section id from the anchor link)</a></li>
+      <li><a href="https://support.squarespace.com/hc/en-us/articles/360000667707">Squarespace: Building a site header</a></li>
+      <li><a href="https://knowledge.workspace.google.com/admin/domains/set-up-mx-records-for-google-workspace">Google: Set up MX records</a></li>
+      <li><a href="https://support.google.com/a/topic/2752442">Google: Set up DKIM (24 to 72 hour wait)</a></li>
+      <li><a href="https://knowledge.workspace.google.com/admin/security/set-up-dmarc">Google: Set up DMARC (48 hours after SPF and DKIM)</a></li>
+      <li><a href="https://support.google.com/a/answer/14229414">Google: Email sender guidelines FAQ</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc7208.html">RFC 7208: Sender Policy Framework</a></li>
+      <li><a href="https://www.phila.gov/documents/renters-access-act-tenant-screening-guidelines">City of Philadelphia: Renters' Access Act screening guidelines</a></li>
+      <li><a href="https://regulations.justia.com/states/pennsylvania/title-49/part-i/subpart-a/chapter-35/subchapter-e/advertising-and-solicitation/section-35-305">49 Pa. Code § 35.305</a></li>
+    </ul>
+    <p class="small">Built by James for this proposal.</p>
+  </div>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

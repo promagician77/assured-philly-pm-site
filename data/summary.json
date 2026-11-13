@@ -1,0 +1,587 @@
+{
+  "generated": "2026-11-13T15:44:40.491Z",
+  "env": {
+    "chromium": "chromium-1243",
+    "playwright": "1.65.0",
+    "axe": "4.14.0",
+    "node": "v22.23.4"
+  },
+  "browser": {
+    "passed": 32,
+    "total": 32,
+    "checks": [
+      {
+        "name": "three tabs built from the section anchors",
+        "ok": true,
+        "detail": "Buy|Sell|Lease"
+      },
+      {
+        "name": "tab bar sits inside the service-tabs section",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "Buy selected on load",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "only Buy visible on load (sections use display:flex)",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "ARIA wiring: tab -> aria-controls -> tabpanel -> aria-labelledby",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "click Sell shows Sell only",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "click updates the URL to #sell without jumping",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "entrance-animated content in a hidden tab ends visible",
+        "ok": true,
+        "detail": "1,1,1"
+      },
+      {
+        "name": "keyboard: ArrowRight, Home, ArrowLeft wraps, End",
+        "ok": true,
+        "detail": "Lease,Lease Buy Lease Lease"
+      },
+      {
+        "name": "roving tabindex: only the selected tab is in the Tab order",
+        "ok": true,
+        "detail": "-1-10"
+      },
+      {
+        "name": "hashchange (#buy) selects Buy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "calling init twice is a no-op",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "axe-core WCAG 2.1 A/AA: 0 violations with tabs active",
+        "ok": true,
+        "detail": "24 rules passed"
+      },
+      {
+        "name": "header: Tenant Portal + Owner Portal",
+        "ok": true,
+        "detail": "Tenant Portal=/tenant-portal|Owner Portal=/owner-portal"
+      },
+      {
+        "name": "header: the two buttons sit side by side",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "header: running the script again adds nothing",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "deep link /services#lease opens Lease",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "deep link scrolls the tab bar into view",
+        "ok": true,
+        "detail": "bar top 139px"
+      },
+      {
+        "name": "cumulative layout shift on load stays under 0.1 (Google's 'good')",
+        "ok": true,
+        "detail": "with snippet 0, page alone 0"
+      },
+      {
+        "name": "375px: tabs fit on one row, no sideways scroll",
+        "ok": true,
+        "detail": "{\"listOverflow\":0,\"pageOverflow\":0,\"minH\":44,\"oneRow\":true}"
+      },
+      {
+        "name": "375px: tab touch targets at least 44px tall",
+        "ok": true,
+        "detail": "44px"
+      },
+      {
+        "name": "mobile menu: both portal buttons, stacked full width",
+        "ok": true,
+        "detail": "Tenant Portal / Owner Portal"
+      },
+      {
+        "name": "320px: tabs fit on one row, no sideways scroll",
+        "ok": true,
+        "detail": "{\"listOverflow\":0,\"pageOverflow\":0,\"minH\":44,\"oneRow\":true}"
+      },
+      {
+        "name": "320px: tab touch targets at least 44px tall",
+        "ok": true,
+        "detail": "44px"
+      },
+      {
+        "name": "JavaScript off: all three sections show, stacked",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "editor preview frame: tabs work as on the live site",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "clicking Edit: tabs step aside, all sections editable",
+        "ok": true,
+        "detail": "{\"tabs\":0,\"shown\":true,\"roles\":0,\"buttons\":1}"
+      },
+      {
+        "name": "clicking Edit: added header button removed for the header editor",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "leaving Edit: tabs and button return",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "page without buy/sell/lease anchors: no tabs, section untouched",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "page without anchors: header still gets the second button",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "no JavaScript errors in any run",
+        "ok": true,
+        "detail": ""
+      }
+    ],
+    "axe": {
+      "violations": 0,
+      "rulesPassed": 24
+    },
+    "cls": {
+      "with snippet": 0,
+      "page alone": 0
+    }
+  },
+  "checker": {
+    "scenarios": 18,
+    "passed": 18,
+    "verdicts": 49,
+    "rows": [
+      {
+        "scenario": "not-started",
+        "desc": "Squarespace site connected, no email records yet",
+        "ok": true,
+        "expected": {
+          "website": "pass",
+          "mx": "fail",
+          "spf": "fail",
+          "dkim": "fail",
+          "dmarc": "warn",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "fail",
+          "spf": "fail",
+          "dkim": "fail",
+          "dmarc": "warn",
+          "mailReady": false
+        }
+      },
+      {
+        "scenario": "complete",
+        "desc": "MX + SPF + 2048-bit DKIM + DMARC p=none with reports",
+        "ok": true,
+        "expected": {
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "legacy-mx",
+        "desc": "The five legacy ASPMX records",
+        "ok": true,
+        "expected": {
+          "mx": "pass",
+          "mailReady": true
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "mixed-mx",
+        "desc": "Google MX left beside an old host's MX",
+        "ok": true,
+        "expected": {
+          "mx": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "fail",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "two-spf",
+        "desc": "Two SPF records (Google + a second sender added separately)",
+        "ok": true,
+        "expected": {
+          "spf": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "fail",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "spf-no-google",
+        "desc": "SPF that authorises another provider but not Google",
+        "ok": true,
+        "expected": {
+          "spf": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "fail",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 1,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "spf-too-many",
+        "desc": "Google plus four senders with nested includes: 16 lookups",
+        "ok": true,
+        "expected": {
+          "spf": "fail",
+          "mailReady": false,
+          "lookups": 16
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "fail",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 16,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "spf-plus-all",
+        "desc": "SPF ending in +all",
+        "ok": true,
+        "expected": {
+          "spf": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "fail",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "spf-no-all",
+        "desc": "SPF without a closing all term",
+        "ok": true,
+        "expected": {
+          "spf": "warn",
+          "mailReady": true
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "warn",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "spf-include-missing",
+        "desc": "SPF include pointing at a name with no SPF record",
+        "ok": true,
+        "expected": {
+          "spf": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "fail",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 5,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "dkim-1024",
+        "desc": "1024-bit DKIM key",
+        "ok": true,
+        "expected": {
+          "dkim": "warn",
+          "mailReady": true,
+          "bits": 1024
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "warn",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 1024
+        }
+      },
+      {
+        "scenario": "dkim-revoked",
+        "desc": "DKIM record with an empty key",
+        "ok": true,
+        "expected": {
+          "dkim": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "fail",
+          "dmarc": "pass",
+          "mailReady": false,
+          "lookups": 4
+        }
+      },
+      {
+        "scenario": "dmarc-missing-p",
+        "desc": "DMARC record with no policy tag",
+        "ok": true,
+        "expected": {
+          "dmarc": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "fail",
+          "mailReady": false,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "dmarc-two",
+        "desc": "Two DMARC records",
+        "ok": true,
+        "expected": {
+          "dmarc": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "fail",
+          "mailReady": false,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "dmarc-reject-no-rua",
+        "desc": "DMARC p=reject without a report address",
+        "ok": true,
+        "expected": {
+          "dmarc": "warn",
+          "mailReady": true
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "warn",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "site-elsewhere",
+        "desc": "Domain still pointing at a parking page",
+        "ok": true,
+        "expected": {
+          "website": "warn",
+          "mailReady": true
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "warn",
+          "mx": "pass",
+          "spf": "pass",
+          "dkim": "pass",
+          "dmarc": "pass",
+          "mailReady": true,
+          "lookups": 4,
+          "bits": 2048
+        }
+      },
+      {
+        "scenario": "resolver-error",
+        "desc": "Resolver fails on the TXT lookups",
+        "ok": true,
+        "expected": {
+          "spf": "unknown",
+          "dkim": "unknown",
+          "mailReady": false
+        },
+        "got": {
+          "dns-host": "info",
+          "website": "pass",
+          "mx": "pass",
+          "spf": "unknown",
+          "dkim": "unknown",
+          "dmarc": "pass",
+          "mailReady": false
+        }
+      },
+      {
+        "scenario": "no-such-domain",
+        "desc": "Domain that does not exist",
+        "ok": true,
+        "expected": {
+          "domain": "fail",
+          "mailReady": false
+        },
+        "got": {
+          "domain": "fail",
+          "mailReady": false
+        }
+      }
+    ]
+  },
+  "snippet": {
+    "fullBytes": 14394,
+    "fullGzip": 4847,
+    "tabsGzip": 3819,
+    "portalsGzip": 1514
+  },
+  "mutations": {
+    "caught": 5,
+    "total": 5,
+    "list": [
+      {
+        "what": "SPF 10-lookup limit not enforced",
+        "suite": "checker",
+        "caught": true
+      },
+      {
+        "what": "1024-bit DKIM key treated as fine",
+        "suite": "checker",
+        "caught": true
+      },
+      {
+        "what": "hidden tabs rely on the hidden attribute alone",
+        "suite": "browser",
+        "caught": true
+      },
+      {
+        "what": "content animated in hidden tabs never woken",
+        "suite": "browser",
+        "caught": true
+      },
+      {
+        "what": "tabs stay active while editing in Squarespace",
+        "suite": "browser",
+        "caught": true
+      }
+    ]
+  }
+}
